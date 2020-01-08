@@ -1,3 +1,19 @@
 body {
-    background: black;
+    /* background: red; */
+}
+
+p.red {
+    color: red;
+} 
+
+.blue {
+    color:blue;
+}
+
+p {
+    color: gray !important;
+}
+
+#bigBadId {
+    color: green;
 }
