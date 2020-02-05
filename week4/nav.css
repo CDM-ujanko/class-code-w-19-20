@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.modal {
+    position: fixed;
+    left: 110vw;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: gray;
+    transition: left 600ms ease-in;
+}
+
+.modal nav {
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    padding: 100px;
+    font-size: 2rem;
+}
+
+.modal nav a {
+    color: black;
+    text-decoration: none;
+    margin-bottom: 1rem;
+}
+
+.modal nav a:hover {
+    color: lightcoral;
+}
+
+.modal.active {
+    left: 0;
+}
+
+.hamburger {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin: 0;
+    list-style: none;
+    cursor: pointer;
+}
+
+.hamburger:hover li {
+    background: gray;
+}
+
+.hamburger li {
+    width: 16px;
+    height: 4px;
+    margin-bottom: 4px;
+    background: black;
+}
+
+.close {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.close:hover::before,
+.close:hover::after {
+    background-color: lightcoral;
+}
+
+.close:before,
+.close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 4px;
+    background-color: #333;
+}
+
+.close:before {
+    transform: rotate(45deg);
+}
+
+.close:after {
+    transform: rotate(-45deg);
+}

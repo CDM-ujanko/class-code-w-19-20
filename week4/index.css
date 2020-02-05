@@ -1,0 +1,43 @@
+.red {
+    color: red;
+}
+
+.relative,
+.absolute,
+.fixed {
+    width: 300px;
+    height: 300px;;
+}
+
+.relative {
+    position: relative;
+    background-color: green;
+}
+
+.absolute {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: purple;
+}
+
+.fixed {
+    position: fixed;
+    top: 300px;
+    left: 300px;
+    background-color: black;
+}
+
+.mySpan {
+    position: relative;
+    display: block;
+    left: 0;
+    transition: all 2000ms ease;
+}
+
+.left {
+    /* BAAAAAAD! */
+    /* left: 300px !important; */
+    /* GOOD! */
+    left: 300px;
+}
