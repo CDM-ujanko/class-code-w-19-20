@@ -12,6 +12,27 @@
 <body>
     <div class="container"></div>
 
+    <template id="people-template">
+        {{#each people}}
+        <div class="person">
+            {{log this}}
+            <img src="{{this.picture}}" />
+            <p>{{@index}}: {{name.first}} {{name.last}}</p>
+            <p>Age: {{age}}</p>
+            <p>{{gender}}</p>
+            <p><a href="mailto:{{email}}">{{email}}</a></p>
+            <p><a href="tel:{{phone}}">{{phone}}</a></p>
+            {{#if (eq eyeColor 'green')}}
+                and he
+            {{else}}
+                and she
+            {{/if}}
+             said {{#bla 100}}{{/bla}}
+            <br>
+        </div>
+        {{/each}}
+    </template>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.js"></script>
     <script src="data.js"></script>
     <script src="index.js"></script>

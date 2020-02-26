@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Week 8</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+
+<body>
+    <div class="input">
+        <label for="date-lookup">Look up for day:</label>
+        <input id="date-lookup" placeholder="YYYY-MM-DD">
+    </div>
+    <div class="container" id="content"></div>
+    <template id="template">
+        <div class="APOD">
+            <h1>{{APOD.title}}</h1>
+            <p>{{APOD.date}}</p>
+            <p>{{APOD.explanation}}</p>
+            {{#if (eq APOD.media_type 'video')}}
+                <iframe width="560" height="315" src="{{APOD.url}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            {{else}}
+                <img src="{{APOD.url}}" />
+            {{/if}}
+        </div>
+    </template>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
