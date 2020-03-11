@@ -1,0 +1,59 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+form {
+    max-width: 600px;
+    margin: 100px auto;
+    border: none;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+}
+
+label {
+    margin: 1rem 0 0.5rem 0;
+}
+
+input {
+    padding: 5px;
+    line-height: 1.4rem;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel] {
+    width: 100%;
+}
+
+input[type=submit] {
+    margin-top: 4rem;
+    font-size: 1rem;
+    padding: 0.6rem;
+}
+
+input:focus:invalid {
+    border: 2px solid red;
+    outline: none;
+}
+
+.radio {
+    display: block;
+}
+
+.radio input,
+.radio label {
+    width: auto;
+    display: inline-block;
+}
+
+@media screen and (min-width: 601px) and (max-width: 980px) {}
+
+@media screen and (max-width: 600px) {}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Week 10</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+
+<body>
+    <form action="someUrl" method="POST">
+        <fieldset>
+            <label for="firstName">First Name:</label>
+            <input id="firstName" type="text" placeholder="Bob" required minlength="2">
+            <label for="lastName">Last Name:</label>
+            <input id="lastName" type="text" placeholder="Belcher" required minlength="2">
+            <label>Email:</label>
+            <input type="email" placeholder="bob.b@aol.com" required>
+            <label>Phone *must be in 555-867-5309 format:</label>
+            <input type="tel" placeholder="555-867-5309" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+        </fieldset>
+
+        <fieldset class="radio">
+            <label for="male">Male</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="female">Female</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="other">Other</label>
+            <input type="radio" id="other" name="gender" value="other">
+        </fieldset>
+
+        <input type="submit" value="Submit">
+    </form>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
